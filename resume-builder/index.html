@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Resume Builder</h1>
+    <button id="printBtn">Download / Print Resume</button>
+  </header>
+
+  <main class="container">
+    <section class="form-panel">
+      <h2>Enter Your Details</h2>
+
+      <label>Full Name</label>
+      <input id="name" value="Rudransh Tomar">
+
+      <label>Professional Title</label>
+      <input id="title" value="B.Tech CSE Student | Java & Web Developer">
+
+      <label>Email</label>
+      <input id="email" value="2k25cse2510582@gmail.com">
+
+      <label>Phone</label>
+      <input id="phone" placeholder="+91 XXXXX XXXXX">
+
+      <label>Location</label>
+      <input id="location" placeholder="Kanpur, Uttar Pradesh">
+
+      <label>LinkedIn</label>
+      <input id="linkedin" placeholder="linkedin.com/in/your-profile">
+
+      <label>GitHub</label>
+      <input id="github" placeholder="github.com/yourusername">
+
+      <label>About / Summary</label>
+      <textarea id="summary">Computer Science student interested in software development, web development and problem solving. Currently strengthening Java, DSA and full-stack development skills.</textarea>
+
+      <label>Education</label>
+      <textarea id="education">B.Tech — Computer Science & Engineering
+Pranveer Singh Institute of Technology (PSIT)
+2025 — Present</textarea>
+
+      <label>Skills</label>
+      <textarea id="skills">Java, Python, C++, HTML, CSS, JavaScript, React, Node.js, MySQL, MongoDB, Git, GitHub</textarea>
+
+      <label>Projects</label>
+      <textarea id="projects">Lost & Found Portal — College-focused platform to report and recover lost items.
+CampKart — Student marketplace for buying and selling pre-owned products.
+Resume Builder — Browser-based resume creation tool using HTML, CSS and JavaScript.</textarea>
+
+      <label>Experience / Achievements</label>
+      <textarea id="experience">Solved DSA problems and continuously practicing problem solving.
+Built academic and personal web development projects.</textarea>
+    </section>
+
+    <section class="resume" id="resume">
+      <div class="resume-head">
+        <h2 id="rName">Rudransh Tomar</h2>
+        <p id="rTitle">B.Tech CSE Student | Java & Web Developer</p>
+        <div class="contact-line">
+          <span id="rEmail">2k25cse2510582@gmail.com</span>
+          <span id="rPhone"></span>
+          <span id="rLocation"></span>
+        </div>
+        <div class="links">
+          <span id="rLinkedin"></span>
+          <span id="rGithub"></span>
+        </div>
+      </div>
+
+      <section>
+        <h3>PROFILE</h3>
+        <p id="rSummary"></p>
+      </section>
+
+      <section>
+        <h3>EDUCATION</h3>
+        <p id="rEducation" class="pre"></p>
+      </section>
+
+      <section>
+        <h3>SKILLS</h3>
+        <p id="rSkills"></p>
+      </section>
+
+      <section>
+        <h3>PROJECTS</h3>
+        <p id="rProjects" class="pre"></p>
+      </section>
+
+      <section>
+        <h3>EXPERIENCE & ACHIEVEMENTS</h3>
+        <p id="rExperience" class="pre"></p>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
