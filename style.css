@@ -274,3 +274,39 @@ footer {
   .skill-grid, .project-grid, .stats { grid-template-columns: 1fr; }
   h1 { font-size: 3rem; }
 }
+.donate-box {
+  max-width: 600px;
+  margin: 30px auto 0;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.donate-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.donate-buttons a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid currentColor;
+  font-weight: 600;
+}
+
+.donate-main {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.upi-text {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.8;
+}
