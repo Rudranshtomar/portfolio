@@ -2,286 +2,517 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rudransh Tomar | CSE Student & Web Developer</title>
-  <meta name="description"
-    content="Rudransh Tomar - CSE student, Java programmer and aspiring full-stack web developer.">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rudransh Tomar | CSE Student & Web Developer</title>
+
+    <meta name="description"
+        content="Rudransh Tomar - CSE student, Java programmer and aspiring full-stack web developer.">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header class="navbar">
-    <a class="logo" href="#home">MY PORTFOLIO<span>.</span></a>
-    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+
+    <!-- =====================================================
+         VIP 3D INTRO LOADER
+    ====================================================== -->
+
+    <div id="intro-loader">
+
+        <div class="vip-intro">
+
+            <!-- Floating particles -->
+            <div class="particles">
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+
+            <!-- 3D Logo -->
+            <div class="vip-logo">
+
+                <div class="logo-ring ring-a"></div>
+                <div class="logo-ring ring-b"></div>
+                <div class="logo-ring ring-c"></div>
+
+                <div class="logo-letter">
+                    RT
+                </div>
+
+            </div>
+
+            <!-- Name -->
+            <div class="vip-title">
+                RUDRANSH <span>TOMAR</span>
+            </div>
+
+            <div class="vip-line"></div>
+
+            <div class="vip-subtitle">
+                JAVA • DSA • FULL STACK
+            </div>
+
+            <!-- Loading -->
+            <div class="vip-loading">
+                <span></span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+    <a class="logo" href="index.html">
+        MY PORTFOLIO<span>.</span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
     <nav id="nav">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#dsa">DSA</a>
-      <a href="#education">Education</a>
-      <a href="#donate">Donate ❤️</a>
-      <a href="#contact">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="dsa.html">DSA</a>
+        <a href="education.html">Education</a>
+        <a href="donate.html">Donate ❤️</a>
+        <a href="contact.html">Contact</a>
     </nav>
-  </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">B.Tech CSE Student</p>
-        <h1>Hi, I'm <span>Rudransh Tomar</span></h1>
-        <h2>Java Developer • Web Developer • Problem Solver</h2>
-        <p class="hero-text">
-          I build practical web projects, strengthen my DSA skills and enjoy turning ideas into useful software.
-        </p>
-        <div class="buttons">
-          <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn primary" href="#contact">Contact Me</a>
-        </div>
-        <div class="socials">
-          <a href="https://github.com/Rudranshtomar" target="_blank" rel="noopener">GitHub ↗</a>
-          <a href="https://www.linkedin.com/in/rudransh-tomar-51a452392/" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a href="mailto:2k25cse2510582@gmail.com">Email Me</a>
-        </div>
-      </div>
-      <div class="hero-card">
-        <div class="avatar">
-          <img src="raj.JPG" alt="Rudransh Tomar">
-        </div>
+</header>
 
-        <p>Currently learning</p>
-        <strong>DSA & Full-Stack Web Development</strong>
 
-        <div class="mini-tags">
-          <span>DSA in Java</span>
-          <span>Java</span>
-          <span>JavaScript</span>
-          <span>React</span>
-          <span>Node.js</span>
-          <span>SQL</span>
-          <span>Git & GitHub</span>
-        </div>
-    </section>
+        <!-- Mobile menu -->
 
-    <section id="about" class="section">
-      <div class="section-title">
-        <p class="eyebrow">About Me</p>
-        <h2>A developer who keeps learning.</h2>
-      </div>
-      <div class="about-grid">
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Open navigation menu">
+
+            ☰
+
+        </button>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN HOME PAGE
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero">
+
+            <!-- LEFT SIDE -->
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    B.Tech CSE Student
+                </p>
+
+
+                <h1>
+
+                    Hi, I'm
+
+                    <span>
+                        Rudransh Tomar
+                    </span>
+
+                </h1>
+
+
+                <h2>
+                    Java Developer • Web Developer • Problem Solver
+                </h2>
+
+
+                <p class="hero-text">
+
+                    I build practical web projects, strengthen my
+                    DSA skills and enjoy turning ideas into useful
+                    software.
+
+                </p>
+
+
+                <!-- Buttons -->
+
+                <div class="buttons">
+
+                    <a
+                        class="btn primary"
+                        href="projects.html">
+
+                        View Projects →
+
+                    </a>
+
+
+                    <a
+                        class="btn secondary"
+                        href="contact.html">
+
+                        Contact Me →
+
+                    </a>
+
+                </div>
+
+
+                <!-- Social Links -->
+
+                <div class="socials">
+
+                    <a
+                        href="https://github.com/Rudranshtomar"
+                        target="_blank"
+                        rel="noopener">
+
+                        GitHub ↗
+
+                    </a>
+
+
+                    <a
+                        href="https://www.linkedin.com/in/rudransh-tomar-51a452392/"
+                        target="_blank"
+                        rel="noopener">
+
+                        LinkedIn ↗
+
+                    </a>
+
+
+                    <a
+                        href="mailto:2k25cse2510582@gmail.com">
+
+                        Email Me
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 RIGHT 3D PROFILE CARD
+            ================================================== -->
+
+            <div class="hero-card">
+
+                <!-- Profile Image -->
+
+                <div class="avatar">
+
+                    <img
+                        src="raj.JPG"
+                        alt="Rudransh Tomar">
+
+                </div>
+
+
+                <p>
+                    Currently learning
+                </p>
+
+
+                <strong>
+                    DSA & Full-Stack Web Development
+                </strong>
+
+
+                <!-- Skills -->
+
+                <div class="mini-tags">
+
+                    <span>
+                        DSA in Java
+                    </span>
+
+                    <span>
+                        Java
+                    </span>
+
+                    <span>
+                        JavaScript
+                    </span>
+
+                    <span>
+                        React
+                    </span>
+
+                    <span>
+                        Node.js
+                    </span>
+
+                    <span>
+                        SQL
+                    </span>
+
+                    <span>
+                        Git & GitHub
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             QUICK INTRO
+        ================================================== -->
+
+        <section class="section quick-intro">
+
+            <div class="section-title">
+
+                <p class="eyebrow">
+                    Welcome
+                </p>
+
+                <h2>
+                    Building my future, one project at a time.
+                </h2>
+
+                <p>
+                    Explore my portfolio to know more about my
+                    skills, projects, DSA journey and education.
+                </p>
+
+            </div>
+
+
+            <!-- Quick Navigation Cards -->
+
+            <div class="skill-grid">
+
+
+                <a
+                    href="about.html"
+                    class="skill-card">
+
+                    <h3>
+                        About Me
+                    </h3>
+
+                    <p>
+                        Learn about my journey, goals and interests
+                        in software development.
+                    </p>
+
+                    <span class="text-link">
+                        Explore →
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="skills.html"
+                    class="skill-card">
+
+                    <h3>
+                        My Skills
+                    </h3>
+
+                    <p>
+                        Explore the programming languages,
+                        technologies and tools I am learning.
+                    </p>
+
+                    <span class="text-link">
+                        View Skills →
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="projects.html"
+                    class="skill-card">
+
+                    <h3>
+                        My Projects
+                    </h3>
+
+                    <p>
+                        Check out the applications and projects
+                        I have built.
+                    </p>
+
+                    <span class="text-link">
+                        View Projects →
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="dsa.html"
+                    class="skill-card">
+
+                    <h3>
+                        DSA Journey
+                    </h3>
+
+                    <p>
+                        Follow my journey of learning data structures
+                        and algorithms using Java.
+                    </p>
+
+                    <span class="text-link">
+                        View DSA →
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="education.html"
+                    class="skill-card">
+
+                    <h3>
+                        Education
+                    </h3>
+
+                    <p>
+                        View my academic journey and Computer Science
+                        & Engineering education.
+                    </p>
+
+                    <span class="text-link">
+                        View Education →
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="contact.html"
+                    class="skill-card">
+
+                    <h3>
+                        Contact Me
+                    </h3>
+
+                    <p>
+                        Have an opportunity or project idea?
+                        Let's connect.
+                    </p>
+
+                    <span class="text-link">
+                        Contact →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CALL TO ACTION
+        ================================================== -->
+
+        <section class="section contact">
+
+            <div class="section-title">
+
+                <p class="eyebrow">
+                    Let's Connect
+                </p>
+
+                <h2>
+                    Have a project or opportunity?
+                </h2>
+
+                <p>
+                    I'm open to internships, projects and
+                    learning opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="contact-buttons">
+
+                <a
+                    class="btn primary"
+                    href="contact.html">
+
+                    Contact Me →
+
+                </a>
+
+
+                <a
+                    class="btn secondary"
+                    href="projects.html">
+
+                    Explore Projects →
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
         <p>
-          I am a B.Tech Computer Science & Engineering student with an interest in software development,
-          web development and problem solving. I am building my foundation in Java and DSA while learning
-          modern full-stack technologies.
+
+            © <span id="year"></span>
+            Rudransh Tomar.
+
+            Built with HTML, CSS & JavaScript.
+
         </p>
-        <div class="stats">
-          <div><strong>Java</strong><span>Programming</span></div>
-          <div><strong>DSA</strong><span>Problem Solving</span></div>
-          <div><strong>Web</strong><span>Development</span></div>
-        </div>
-      </div>
-    </section>
 
-    <section id="skills" class="section alt">
-      <div class="section-title">
-        <p class="eyebrow">My Skills</p>
-        <h2>Technologies I'm learning and using.</h2>
-      </div>
-      <div class="skill-grid">
-        <article class="skill-card">
-          <h3>Programming</h3>
-          <p>Java • Python • C++</p>
-        </article>
-        <article class="skill-card">
-          <h3>Frontend</h3>
-          <p>HTML • CSS • JavaScript • React</p>
-        </article>
-        <article class="skill-card">
-          <h3>Backend</h3>
-          <p>Node.js • Express.js</p>
-        </article>
-        <article class="skill-card">
-          <h3>Database</h3>
-          <p>MySQL • MongoDB</p>
-        </article>
-        <article class="skill-card">
-          <h3>DSA</h3>
-          <p>Arrays • Strings • Stack • Queue • Trees • Sorting</p>
-        </article>
-        <article class="skill-card">
-          <h3>Tools</h3>
-          <p>Git • GitHub • VS Code</p>
-        </article>
-      </div>
-    </section>
+    </footer>
 
-    <section id="projects" class="section">
-      <div class="section-title">
-        <p class="eyebrow">Featured Projects</p>
-        <h2>Things I've built.</h2>
-      </div>
-      <div class="project-grid">
-        <article class="project-card">
-          <div class="project-number">01</div>
-          <h3>Lost & Found Portal</h3>
-          <p>A college-focused platform to report, search and recover lost or found items.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-          <div class="project-links"><a href="#" class="disabled-link">Live Demo</a><a href="https://github.com/"
-              target="_blank">GitHub ↗</a></div>
-        </article>
-        <article class="project-card">
-          <div class="project-number">02</div>
-          <h3>CampKart</h3>
-          <p>A student marketplace concept for buying and selling useful pre-owned products.</p>
-          <div class="tags"><span>Web</span><span>JavaScript</span><span>MongoDB</span></div>
-          <div class="project-links"><a href="#" class="disabled-link">Live Demo</a><a href="https://github.com/"
-              target="_blank">GitHub ↗</a></div>
-        </article>
-        <article class="project-card">
-          <div class="project-number">03</div>
-          <h3>Resume Builder</h3>
-          <p>
-            A professional resume builder that lets students create,
-            preview and download an ATS-friendly resume.
-          </p>
-          <div class="tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-          </div>
-          <div class="project-links">
-            <a href="resume-builder/index.html" target="_blank">
-              Live Demo ↗
-            </a>
-            <a href="https://github.com/Rudranshtomar/resume-builder/settings/pages" target="_blank" rel="noopener">
-              GitHub ↗
-            </a>
-          </div>
-        </article>
-      </div>
-      <p class="hint">Replace the demo/GitHub links with your real project URLs.</p>
-    </section>
 
-    <section id="dsa" class="section alt">
-      <div class="section-title">
-        <p class="eyebrow">DSA Journey</p>
-        <h2>Problem solving, one question at a time.</h2>
-      </div>
-      <div class="dsa-box">
-        <div class="dsa-item"><strong>Arrays & Strings</strong><span>Learning</span></div>
-        <div class="dsa-item"><strong>Stack & Queue</strong><span>Learning</span></div>
-        <div class="dsa-item"><strong>Linked List</strong><span>Learning</span></div>
-        <div class="dsa-item"><strong>Trees & Heap</strong><span>Learning</span></div>
-      </div>
-      <a class="text-link" href="https://leetcode.com/" target="_blank" rel="noopener">View LeetCode ↗</a>
-    </section>
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
-    <section id="education" class="section">
-      <div class="section-title">
-        <p class="eyebrow">Education</p>
-        <h2>My academic journey.</h2>
-      </div>
-      <div class="timeline">
-        <div class="timeline-card">
-          <span>2025 — Present</span>
-          <h3>B.Tech — Computer Science & Engineering</h3>
-          <p>Pranveer Singh Institute of Technology (PSIT)</p>
-        </div>
-      </div>
-    </section>
-    <section id="donate" class="section donate-section">
-  <div class="section-title">
-    <p class="eyebrow">Support My Work</p>
-    <h2>Support My Journey ❤️</h2>
-    <p>
-      If you like my projects and want to support my work,
-      you can send me a small contribution.
-    </p>
-  </div>
+    <script src="script.js"></script>
 
-  <div class="donate-card">
-
-    <div class="donate-content">
-      <h3>☕ Buy Me a Coffee</h3>
-
-      <p class="donate-message">
-        Every small contribution motivates me to keep learning
-        and building better projects.
-      </p>
-
-      <p class="amount-title">Choose an amount</p>
-
-      <div class="amount-buttons">
-        <a href="upi://pay?pa=rudranshtomar1@okaxis&pn=Rudransh%20Tomar&am=50&cu=INR">₹50</a>
-
-        <a href="upi://pay?pa=rudranshtomar1@okaxis&pn=Rudransh%20Tomar&am=100&cu=INR">₹100</a>
-
-        <a href="upi://pay?pa=rudranshtomar1@okaxis&pn=Rudransh%20Tomar&am=200&cu=INR">₹200</a>
-
-        <a href="upi://pay?pa=rudranshtomar1@okaxis&pn=Rudransh%20Tomar&am=500&cu=INR">₹500</a>
-      </div>
-
-      <a class="btn primary donate-main"
-         href="upi://pay?pa=rudranshtomar1@okaxis&pn=Rudransh%20Tomar&cu=INR">
-        ❤️ Pay via UPI
-      </a>
-
-      <p class="upi-text">
-        UPI ID:
-        <strong>rudranshtomar1@okaxis</strong>
-      </p>
-    </div>
-
-    <div class="qr-container">
-      <img src="qr.png" alt="Rudransh Tomar UPI QR Code">
-
-      <p>Scan to donate</p>
-      <small>Open your UPI app and scan this QR</small>
-    </div>
-
-  </div>
-</section>
-    <section id="contact" class="section contact">
-      <div class="section-title">
-        <p class="eyebrow">Let's Connect</p>
-        <h2>Have a project or opportunity?</h2>
-        <p>I'm open to internships, projects and learning opportunities.</p>
-      </div>
-      <div class="contact-buttons">
-  <a class="btn primary" href="mailto:2k25cse2510582@gmail.com">
-    📧 Email Me
-  </a>
-
-  <a class="btn primary" href="tel:+918127993177">
-    📞 Call Me
-  </a>
-
-  <a class="btn primary" href="https://wa.me/918127993177" target="_blank" rel="noopener">
-    💬 WhatsApp
-  </a>
-
-  <a class="btn primary" href="https://www.linkedin.com/in/rudransh-tomar-51a452392/" target="_blank"
-    rel="noopener">
-    LinkedIn
-  </a>
-
-  <a class="btn primary" href="https://github.com/Rudranshtomar" target="_blank" rel="noopener">
-    GitHub
-  </a>
-</div>
-
-<p class="phone-number">
-  📱 8127993177
-</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© <span id="year"></span> Rudransh Tomar. Built with HTML, CSS & JavaScript.</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 
 </html>
