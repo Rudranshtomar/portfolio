@@ -16,6 +16,9 @@
 
 <body>
 
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
 
 <header class="navbar">
 
@@ -23,27 +26,47 @@
         MY PORTFOLIO<span>.</span>
     </a>
 
-    <button class="menu-btn" id="menuBtn">☰</button>
+    <button class="menu-btn" id="menuBtn">
+        ☰
+    </button>
 
     <nav id="nav">
 
         <a href="index.html">Home</a>
+
         <a href="about.html">About</a>
+
         <a href="skills.html">Skills</a>
+
         <a href="projects.html">Projects</a>
+
         <a href="dsa.html">DSA</a>
+
         <a href="education.html">Education</a>
+
         <a href="donate.html">Donate ❤️</a>
-        <a href="contact.html" class="active">Contact</a>
+
+        <a href="contact.html" class="active">
+            Contact
+        </a>
 
     </nav>
 
 </header>
 
 
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
 <main>
 
 <section class="section page-section contact">
+
+
+    <!-- =================================================
+         CONTACT INTRO
+    ================================================== -->
 
     <div class="section-title">
 
@@ -63,55 +86,223 @@
     </div>
 
 
+    <!-- =================================================
+         CONTACT FORM
+    ================================================== -->
+
+    <div class="contact-form-wrapper">
+
+        <!-- FORM HEADER -->
+
+        <div class="contact-form-header">
+
+            <span class="form-icon">
+                ✦
+            </span>
+
+            <div>
+
+                <p class="eyebrow">
+                    SEND A MESSAGE
+                </p>
+
+                <h2>
+                    Let's Build Something
+                    <span>Great.</span>
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form id="contactForm"
+              class="contact-form">
+
+
+            <!-- NAME + EMAIL -->
+
+            <div class="form-row">
+
+
+                <!-- NAME -->
+
+                <div class="input-group">
+
+                    <span class="input-icon">
+                        👤
+                    </span>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder=" "
+                        required
+                    >
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+                    <span class="input-icon">
+                        ✉
+                    </span>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder=" "
+                        required
+                    >
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUBJECT -->
+
+            <div class="input-group">
+
+                <span class="input-icon">
+                    ⚡
+                </span>
+
+                <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder=" "
+                >
+
+                <label for="subject">
+                    Subject
+                </label>
+
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <div class="input-group textarea-group">
+
+                <span class="input-icon">
+                    💬
+                </span>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder=" "
+                    rows="6"
+                    required
+                ></textarea>
+
+                <label for="message">
+                    Your Message
+                </label>
+
+            </div>
+
+
+            <!-- SEND BUTTON -->
+
+            <button
+                type="submit"
+                class="send-message-btn"
+            >
+
+                <span>
+                    Send Message
+                </span>
+
+                <span class="send-arrow">
+                    ➜
+                </span>
+
+            </button>
+
+
+            <!-- FORM RESPONSE -->
+
+            <div
+                id="formMessage"
+                class="form-message">
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <!-- =================================================
+         SOCIAL BUTTONS
+    ================================================== -->
+
     <div class="contact-buttons">
 
-        <a class="btn primary"
-           href="mailto:2k25cse2510582@gmail.com">
 
-            📧 Email Me
-
-        </a>
-
-
-        <a class="btn primary"
-           href="tel:+918127993177">
-
-            📞 Call Me
-
-        </a>
-
-
-        <a class="btn primary"
-           href="https://wa.me/918127993177"
-           target="_blank">
-
-            💬 WhatsApp
-
-        </a>
-
-
-        <a class="btn primary"
-           href="https://www.linkedin.com/in/rudransh-tomar-51a452392/"
-           target="_blank">
+        <a
+            class="btn primary"
+            href="https://www.linkedin.com/in/rudransh-tomar-51a452392/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
 
             LinkedIn ↗
 
         </a>
 
 
-        <a class="btn primary"
-           href="https://github.com/Rudranshtomar"
-           target="_blank">
+        <a
+            class="btn primary"
+            href="https://github.com/Rudranshtomar"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
 
             GitHub ↗
 
         </a>
+        <a
+            class="btn primary"
+            href="mailto:2k25cse2510582@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            Email me ↗
+
+        </a>
 
     </div>
+
+
+    <!-- =================================================
+         BACK HOME
+    ================================================== -->
+
     <div class="back-home">
 
-        <a href="index.html"
-           class="btn primary">
+        <a
+            href="index.html"
+            class="btn primary"
+        >
 
             ← Back to Home
 
@@ -119,17 +310,14 @@
 
     </div>
 
-
-    <p class="phone-number">
-
-        📱 8127993177
-
-    </p>
-
 </section>
 
 </main>
 
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
@@ -144,7 +332,12 @@
 </footer>
 
 
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script src="script.js"></script>
 
 </body>
+
 </html>

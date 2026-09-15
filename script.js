@@ -1,118 +1,248 @@
 document.addEventListener("DOMContentLoaded", function () {
-  /* YEAR */
 
-  const year = document.getElementById("year");
+    /* YEAR */
 
-  if (year) {
-    year.textContent = new Date().getFullYear();
-  }
+    const year = document.getElementById("year");
 
-  /* MOBILE MENU */
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
 
-  const menuBtn = document.getElementById("menuBtn");
-  const nav = document.getElementById("nav");
 
-  if (menuBtn && nav) {
-    menuBtn.addEventListener("click", function () {
-      nav.classList.toggle("show");
-    });
-  }
+    /* MOBILE MENU */
 
-  /* 3D INTRO */
-  const loader = document.getElementById("intro-loader");
+    const menuBtn = document.getElementById("menuBtn");
+    const nav = document.getElementById("nav");
 
-  if (!loader) {
-    return;
-  }
+    if (menuBtn && nav) {
 
-  // Wait for animation to finish
-  setTimeout(function () {
-    loader.classList.add("loader-hide");
-  }, 2800);
+        menuBtn.addEventListener("click", function () {
 
-  // Completely remove loader after fade-out
-  setTimeout(function () {
-    loader.style.display = "none";
-  }, 3800);
+            nav.classList.toggle("show");
 
-  /* CLOSE MOBILE MENU */
+        });
 
-  if (nav) {
-    nav.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        nav.classList.remove("show");
-      });
-    });
-  }
+    }
 
-  /* 3D HERO CARD */
 
-  const heroCard = document.querySelector(".hero-card");
+    /* 3D INTRO */
+const loader = document.getElementById("intro-loader");
 
-  if (heroCard) {
-    heroCard.addEventListener("mousemove", function (e) {
-      if (window.innerWidth < 700) return;
+    if (!loader) {
+        return;
+    }
 
-      const rect = heroCard.getBoundingClientRect();
+    // Wait for animation to finish
+    setTimeout(function () {
 
-      const x = e.clientX - rect.left;
+        loader.classList.add("loader-hide");
 
-      const y = e.clientY - rect.top;
+    }, 2800);
 
-      const centerX = rect.width / 2;
 
-      const centerY = rect.height / 2;
+    // Completely remove loader after fade-out
+    setTimeout(function () {
 
-      const rotateX = ((y - centerY) / centerY) * -8;
+        loader.style.display = "none";
 
-      const rotateY = ((x - centerX) / centerX) * 8;
+    }, 3800);
 
-      heroCard.style.transform = `perspective(1000px)
+    /* CLOSE MOBILE MENU */
+
+    if (nav) {
+
+        nav.querySelectorAll("a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                nav.classList.remove("show");
+
+            });
+
+        });
+
+    }
+
+
+    /* 3D HERO CARD */
+
+    const heroCard =
+        document.querySelector(".hero-card");
+
+    if (heroCard) {
+
+        heroCard.addEventListener(
+            "mousemove",
+            function (e) {
+
+                if (window.innerWidth < 700) return;
+
+                const rect =
+                    heroCard.getBoundingClientRect();
+
+                const x =
+                    e.clientX - rect.left;
+
+                const y =
+                    e.clientY - rect.top;
+
+                const centerX =
+                    rect.width / 2;
+
+                const centerY =
+                    rect.height / 2;
+
+                const rotateX =
+                    ((y - centerY) / centerY) * -8;
+
+                const rotateY =
+                    ((x - centerX) / centerX) * 8;
+
+                heroCard.style.transform =
+                    `perspective(1000px)
                      rotateX(${rotateX}deg)
                      rotateY(${rotateY}deg)
                      translateY(-8px)`;
-    });
 
-    heroCard.addEventListener("mouseleave", function () {
-      heroCard.style.transform = "";
-    });
-  }
+            }
+        );
+
+
+        heroCard.addEventListener(
+            "mouseleave",
+            function () {
+
+                heroCard.style.transform = "";
+
+            }
+        );
+
+    }
+
 });
 document.addEventListener("DOMContentLoaded", function () {
-  /* =========================
+
+    /* =========================
        MOBILE MENU
     ========================= */
 
-  const menuBtn = document.getElementById("menuBtn");
-  const nav = document.getElementById("nav");
+    const menuBtn = document.getElementById("menuBtn");
+    const nav = document.getElementById("nav");
 
-  if (menuBtn && nav) {
-    menuBtn.addEventListener("click", function () {
-      nav.classList.toggle("active");
-    });
-  }
+    if (menuBtn && nav) {
 
-  /* =========================
+        menuBtn.addEventListener("click", function () {
+
+            nav.classList.toggle("active");
+
+        });
+
+    }
+
+
+    /* =========================
        CLOSE MENU AFTER CLICK
     ========================= */
 
-  if (nav) {
-    const links = nav.querySelectorAll("a");
+    if (nav) {
 
-    links.forEach(function (link) {
-      link.addEventListener("click", function () {
-        nav.classList.remove("active");
-      });
-    });
-  }
+        const links = nav.querySelectorAll("a");
 
-  /* =========================
+        links.forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                nav.classList.remove("active");
+
+            });
+
+        });
+
+    }
+
+
+    /* =========================
        FOOTER YEAR
     ========================= */
 
-  const year = document.getElementById("year");
+    const year = document.getElementById("year");
 
-  if (year) {
-    year.textContent = new Date().getFullYear();
-  }
+    if (year) {
+
+        year.textContent =
+            new Date().getFullYear();
+
+    }
+
 });
+
+
+
+const contactForm = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", async function (e) {
+
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
+
+        formMessage.textContent = "Sending...";
+        formMessage.style.color = "#fff";
+
+        try {
+
+            const response = await fetch(
+                "http://localhost:5000/api/messages",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+                        name: name,
+                        email: email,
+                        subject: subject,
+                        message: message
+                    })
+                }
+            );
+
+            const data = await response.json();
+
+            if (data.success) {
+
+                formMessage.textContent =
+                    "Message sent successfully! 🚀";
+
+                formMessage.style.color = "green";
+
+                contactForm.reset();
+
+            } else {
+
+                formMessage.textContent =
+                    data.message || "Something went wrong.";
+
+                formMessage.style.color = "red";
+            }
+
+        } catch (error) {
+
+            console.error(error);
+
+            formMessage.textContent =
+                "Unable to connect to server ❌";
+
+            formMessage.style.color = "red";
+        }
+
+    });
+}
