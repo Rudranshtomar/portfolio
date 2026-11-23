@@ -5,20 +5,25 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Contact Rudransh Tomar for internships, collaborations, projects and software development opportunities.">
+
+    <meta name="theme-color" content="#ffffff">
 
     <title>Contact | Rudransh Tomar</title>
 
     <link rel="stylesheet" href="style.css">
 
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
 
-<!-- =====================================================
-     NAVBAR
-===================================================== -->
+<!-- NAVBAR -->
 
 <header class="navbar">
 
@@ -26,47 +31,37 @@
         MY PORTFOLIO<span>.</span>
     </a>
 
-    <button class="menu-btn" id="menuBtn">
+    <button class="menu-btn"
+            id="menuBtn"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false">
         ☰
     </button>
 
     <nav id="nav">
 
         <a href="index.html">Home</a>
-
         <a href="about.html">About</a>
-
         <a href="skills.html">Skills</a>
-
         <a href="projects.html">Projects</a>
-
         <a href="dsa.html">DSA</a>
-
         <a href="education.html">Education</a>
-
         <a href="donate.html">Donate ❤️</a>
-
-        <a href="contact.html" class="active">
-            Contact
-        </a>
+        <a href="contact.html" class="active" aria-current="page">Contact</a>
 
     </nav>
 
 </header>
 
 
-<!-- =====================================================
-     MAIN
-===================================================== -->
+<!-- MAIN CONTENT -->
 
 <main>
 
 <section class="section page-section contact">
 
-
-    <!-- =================================================
-         CONTACT INTRO
-    ================================================== -->
+    <!-- CONTACT INTRO -->
 
     <div class="section-title">
 
@@ -75,24 +70,20 @@
         </p>
 
         <h1>
-            Have a Project or Opportunity?
+            Get In Touch.
         </h1>
 
         <p>
-            I'm open to internships, projects and learning
-            opportunities.
+            Have an exciting project, internship opportunity
+            or collaboration idea? I'd love to hear from you.
         </p>
 
     </div>
 
 
-    <!-- =================================================
-         CONTACT FORM
-    ================================================== -->
+    <!-- CONTACT FORM -->
 
     <div class="contact-form-wrapper">
-
-        <!-- FORM HEADER -->
 
         <div class="contact-form-header">
 
@@ -116,23 +107,18 @@
         </div>
 
 
-        <!-- FORM -->
-
         <form id="contactForm"
               class="contact-form">
 
 
-            <!-- NAME + EMAIL -->
+            <!-- NAME AND EMAIL -->
 
             <div class="form-row">
-
-
-                <!-- NAME -->
 
                 <div class="input-group">
 
                     <span class="input-icon">
-                        👤
+                        <i class="fas fa-user"></i>
                     </span>
 
                     <input
@@ -140,6 +126,9 @@
                         id="name"
                         name="name"
                         placeholder=" "
+                        autocomplete="name"
+                        minlength="2"
+                        maxlength="60"
                         required
                     >
 
@@ -150,12 +139,10 @@
                 </div>
 
 
-                <!-- EMAIL -->
-
                 <div class="input-group">
 
                     <span class="input-icon">
-                        ✉
+                        <i class="fas fa-envelope"></i>
                     </span>
 
                     <input
@@ -163,6 +150,8 @@
                         id="email"
                         name="email"
                         placeholder=" "
+                        autocomplete="email"
+                        maxlength="100"
                         required
                     >
 
@@ -180,7 +169,7 @@
             <div class="input-group">
 
                 <span class="input-icon">
-                    ⚡
+                    <i class="fas fa-pen"></i>
                 </span>
 
                 <input
@@ -188,10 +177,11 @@
                     id="subject"
                     name="subject"
                     placeholder=" "
+                    maxlength="100"
                 >
 
                 <label for="subject">
-                    Subject
+                    Subject (Optional)
                 </label>
 
             </div>
@@ -202,7 +192,7 @@
             <div class="input-group textarea-group">
 
                 <span class="input-icon">
-                    💬
+                    <i class="fas fa-comment-dots"></i>
                 </span>
 
                 <textarea
@@ -210,6 +200,8 @@
                     name="message"
                     placeholder=" "
                     rows="6"
+                    minlength="10"
+                    maxlength="2000"
                     required
                 ></textarea>
 
@@ -220,7 +212,7 @@
             </div>
 
 
-            <!-- SEND BUTTON -->
+            <!-- SUBMIT BUTTON -->
 
             <button
                 type="submit"
@@ -232,17 +224,19 @@
                 </span>
 
                 <span class="send-arrow">
-                    ➜
+                    <i class="fas fa-arrow-right"></i>
                 </span>
 
             </button>
 
 
-            <!-- FORM RESPONSE -->
+            <!-- RESPONSE MESSAGE -->
 
             <div
                 id="formMessage"
-                class="form-message">
+                class="form-message"
+                role="status"
+                aria-live="polite">
             </div>
 
         </form>
@@ -250,20 +244,17 @@
     </div>
 
 
-    <!-- =================================================
-         SOCIAL BUTTONS
-    ================================================== -->
+    <!-- SOCIAL LINKS -->
 
     <div class="contact-buttons">
-
 
         <a
             class="btn primary"
             href="https://www.linkedin.com/in/rudransh-tomar-51a452392/"
             target="_blank"
-            rel="noopener noreferrer"
-        >
+            rel="noopener noreferrer">
 
+            <i class="fab fa-linkedin"></i>
             LinkedIn ↗
 
         </a>
@@ -273,39 +264,32 @@
             class="btn primary"
             href="https://github.com/Rudranshtomar"
             target="_blank"
-            rel="noopener noreferrer"
-        >
+            rel="noopener noreferrer">
 
+            <i class="fab fa-github"></i>
             GitHub ↗
 
         </a>
+
+
         <a
             class="btn primary"
-            href="mailto:2k25cse2510582@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
+            href="mailto:2k25cse2510582@gmail.com">
 
-            Email me ↗
+            <i class="fas fa-envelope"></i>
+            Email Me ↗
 
         </a>
 
     </div>
 
 
-    <!-- =================================================
-         BACK HOME
-    ================================================== -->
+    <!-- BACK HOME -->
 
     <div class="back-home">
 
-        <a
-            href="index.html"
-            class="btn primary"
-        >
-
+        <a href="index.html" class="btn primary">
             ← Back to Home
-
         </a>
 
     </div>
@@ -315,26 +299,20 @@
 </main>
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- FOOTER -->
 
 <footer>
 
     <p>
-
         © <span id="year"></span>
         Rudransh Tomar.
         Built with HTML, CSS & JavaScript.
-
     </p>
 
 </footer>
 
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
+<!-- JAVASCRIPT -->
 
 <script src="script.js"></script>
 
