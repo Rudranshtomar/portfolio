@@ -1,321 +1,366 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="Contact Rudransh Tomar for internships, collaborations, projects and software development opportunities.">
-
-    <meta name="theme-color" content="#ffffff">
 
     <title>Contact | Rudransh Tomar</title>
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <style>
+        /* =====================================
+           3D CONTACT SECTION
+        ===================================== */
+
+        .contact {
+            padding: 80px 8%;
+            perspective: 1200px;
+        }
+
+        .contact .section-title {
+            text-align: center;
+            font-size: 38px;
+            font-weight: 800;
+            color: #172554;
+            text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Main 3D Form Box */
+
+        .contact-form-wrapper {
+            max-width: 750px;
+            margin: 40px auto;
+            padding: 40px;
+            background: linear-gradient(145deg, #ffffff, #e9eef7);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 22px;
+            box-shadow:
+                12px 12px 25px rgba(0, 0, 0, 0.12),
+                -8px -8px 20px rgba(255, 255, 255, 0.9);
+            transition: all 0.4s ease;
+        }
+
+        .contact-form-wrapper:hover {
+            transform: translateY(-8px) rotateX(1deg);
+            box-shadow:
+                18px 20px 35px rgba(0, 0, 0, 0.16),
+                -8px -8px 20px rgba(255, 255, 255, 0.9);
+        }
+
+        /* Form Header */
+
+        .contact-form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-form-header h2 {
+            color: #172554;
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        .contact-form-header p {
+            color: #64748b;
+        }
+
+        /* Input Fields */
+
+        .contact-form .input-group {
+            position: relative;
+            margin-bottom: 22px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 16px 18px;
+            border: 1px solid #dbe3ef;
+            border-radius: 12px;
+            background: linear-gradient(145deg, #ffffff, #f1f5f9);
+            color: #172554;
+            font-size: 15px;
+            outline: none;
+            box-shadow:
+                5px 5px 10px rgba(0, 0, 0, 0.08),
+                -4px -4px 10px rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #2563eb;
+            transform: translateY(-3px);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12),
+                7px 9px 15px rgba(37, 99, 235, 0.12);
+        }
+
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .contact-form .input-icon {
+            color: #2563eb;
+        }
+
+        /* Send Button */
+
+        .send-message-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(145deg, #3b82f6, #1d4ed8);
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow:
+                0 7px 0 #153e9f,
+                0 12px 20px rgba(37, 99, 235, 0.25);
+            transition: all 0.25s ease;
+        }
+
+        .send-message-btn:hover {
+            transform: translateY(-4px);
+            box-shadow:
+                0 10px 0 #153e9f,
+                0 16px 25px rgba(37, 99, 235, 0.3);
+        }
+
+        .send-message-btn:active {
+            transform: translateY(4px);
+            box-shadow: 0 2px 0 #153e9f;
+        }
+
+        /* Social Buttons */
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 35px;
+        }
+
+        .contact-buttons .btn {
+            padding: 14px 24px;
+            border-radius: 12px;
+            background: linear-gradient(145deg, #ffffff, #e8edf5);
+            color: #1e40af;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow:
+                6px 6px 12px rgba(0, 0, 0, 0.1),
+                -5px -5px 12px rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+        }
+
+        .contact-buttons .btn:hover {
+            transform: translateY(-6px);
+            color: #ffffff;
+            background: linear-gradient(145deg, #3b82f6, #1d4ed8);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
+        }
+
+        .back-home {
+            text-align: center;
+            margin: 35px 0;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 768px) {
+            .contact {
+                padding: 55px 5%;
+            }
+
+            .contact-form-wrapper {
+                padding: 25px 18px;
+            }
+
+            .contact .section-title {
+                font-size: 30px;
+            }
+
+            .contact-form-header h2 {
+                font-size: 24px;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .contact-buttons .btn {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="index.html" class="logo">Rudransh<span>.</span></a>
 
-<header class="navbar">
+        <button class="menu-btn" id="menu-btn" aria-label="Open navigation">
+            <i class="fas fa-bars"></i>
+        </button>
 
-    <a class="logo" href="index.html">
-        MY PORTFOLIO<span>.</span>
-    </a>
+        <nav id="nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="dsa.html">DSA</a>
+            <a href="education.html">Education</a>
+            <a href="donate.html">Donate</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
 
-    <button class="menu-btn"
-            id="menuBtn"
-            type="button"
-            aria-label="Toggle navigation menu"
-            aria-expanded="false">
-        ☰
-    </button>
+    <!-- EXISTING CONTACT SECTION -->
+    <section class="section page-section contact">
 
-    <nav id="nav">
+        <h1 class="section-title">Get In Touch</h1>
 
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="dsa.html">DSA</a>
-        <a href="education.html">Education</a>
-        <a href="donate.html">Donate ❤️</a>
-        <a href="contact.html" class="active" aria-current="page">Contact</a>
-
-    </nav>
-
-</header>
-
-
-<!-- MAIN CONTENT -->
-
-<main>
-
-<section class="section page-section contact">
-
-    <!-- CONTACT INTRO -->
-
-    <div class="section-title">
-
-        <p class="eyebrow">
-            LET'S CONNECT
+        <p class="section-description" style="text-align:center;">
+            Have an opportunity, project idea, or collaboration in mind?
+            Feel free to connect with me. I'm always open to learning,
+            building and exploring new opportunities.
+            <br>
+            <strong>Location:</strong> Kanpur, Uttar Pradesh, India
         </p>
 
-        <h1>
-            Get In Touch.
-        </h1>
+        <!-- CONTACT FORM -->
+        <div class="contact-form-wrapper">
 
-        <p>
-            Have an exciting project, internship opportunity
-            or collaboration idea? I'd love to hear from you.
-        </p>
+            <div class="contact-form-header">
 
-    </div>
+                <span class="eyebrow">HAVE SOMETHING IN MIND?</span>
 
+                <h2>Let's Build Something Great.</h2>
 
-    <!-- CONTACT FORM -->
-
-    <div class="contact-form-wrapper">
-
-        <div class="contact-form-header">
-
-            <span class="form-icon">
-                ✦
-            </span>
-
-            <div>
-
-                <p class="eyebrow">
-                    SEND A MESSAGE
+                <p>
+                    Send me a message and let's discuss your ideas.
                 </p>
 
-                <h2>
-                    Let's Build Something
-                    <span>Great.</span>
-                </h2>
-
             </div>
+
+            <form class="contact-form" id="contact-form">
+
+                <div class="form-row">
+
+                    <div class="input-group">
+                        <label for="name">Your Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Your Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required>
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+                    <label for="subject">Subject</label>
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="Internship / Project / Collaboration"
+                        required>
+                </div>
+
+                <div class="input-group textarea-group">
+                    <label for="message">Your Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Tell me about your idea or opportunity..."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="send-message-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    Send Message
+                    <span class="send-arrow">→</span>
+                </button>
+
+                <p id="form-message" class="form-message"></p>
+
+            </form>
 
         </div>
 
-
-        <form id="contactForm"
-              class="contact-form">
-
-
-            <!-- NAME AND EMAIL -->
-
-            <div class="form-row">
-
-                <div class="input-group">
-
-                    <span class="input-icon">
-                        <i class="fas fa-user"></i>
-                    </span>
-
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder=" "
-                        autocomplete="name"
-                        minlength="2"
-                        maxlength="60"
-                        required
-                    >
-
-                    <label for="name">
-                        Your Name
-                    </label>
-
-                </div>
-
-
-                <div class="input-group">
-
-                    <span class="input-icon">
-                        <i class="fas fa-envelope"></i>
-                    </span>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder=" "
-                        autocomplete="email"
-                        maxlength="100"
-                        required
-                    >
-
-                    <label for="email">
-                        Email Address
-                    </label>
-
-                </div>
-
-            </div>
-
-
-            <!-- SUBJECT -->
-
-            <div class="input-group">
-
-                <span class="input-icon">
-                    <i class="fas fa-pen"></i>
-                </span>
-
-                <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    placeholder=" "
-                    maxlength="100"
-                >
-
-                <label for="subject">
-                    Subject (Optional)
-                </label>
-
-            </div>
-
-
-            <!-- MESSAGE -->
-
-            <div class="input-group textarea-group">
-
-                <span class="input-icon">
-                    <i class="fas fa-comment-dots"></i>
-                </span>
-
-                <textarea
-                    id="message"
-                    name="message"
-                    placeholder=" "
-                    rows="6"
-                    minlength="10"
-                    maxlength="2000"
-                    required
-                ></textarea>
-
-                <label for="message">
-                    Your Message
-                </label>
-
-            </div>
-
-
-            <!-- SUBMIT BUTTON -->
-
-            <button
-                type="submit"
-                class="send-message-btn"
-            >
-
-                <span>
-                    Send Message
-                </span>
-
-                <span class="send-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </span>
-
-            </button>
-
-
-            <!-- RESPONSE MESSAGE -->
-
-            <div
-                id="formMessage"
-                class="form-message"
-                role="status"
-                aria-live="polite">
-            </div>
-
-        </form>
-
-    </div>
-
-
-    <!-- SOCIAL LINKS -->
-
-    <div class="contact-buttons">
-
-        <a
-            class="btn primary"
-            href="https://www.linkedin.com/in/rudransh-tomar-51a452392/"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <i class="fab fa-linkedin"></i>
-            LinkedIn ↗
-
-        </a>
-
-
-        <a
-            class="btn primary"
-            href="https://github.com/Rudranshtomar"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <i class="fab fa-github"></i>
-            GitHub ↗
-
-        </a>
-
-
-        <a
-            class="btn primary"
-            href="mailto:2k25cse2510582@gmail.com">
-
-            <i class="fas fa-envelope"></i>
-            Email Me ↗
-
-        </a>
-
-    </div>
-
-
-    <!-- BACK HOME -->
-
-    <div class="back-home">
-
-        <a href="index.html" class="btn primary">
-            ← Back to Home
-        </a>
-
-    </div>
-
-</section>
-
-</main>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    <p>
-        © <span id="year"></span>
-        Rudransh Tomar.
-        Built with HTML, CSS & JavaScript.
-    </p>
-
-</footer>
-
-
-<!-- JAVASCRIPT -->
-
-<script src="script.js"></script>
+        <!-- EXISTING SOCIAL BUTTONS -->
+        <div class="contact-buttons">
+
+            <a href="mailto:2k25cse2510582@gmail.com"
+                class="btn primary">
+                <i class="fas fa-envelope"></i>
+                Email Me
+            </a>
+
+            <a href="https://www.linkedin.com/in/rudransh-tomar-51a452392/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn">
+                <i class="fab fa-linkedin"></i>
+                LinkedIn
+            </a>
+
+            <a href="https://github.com/Rudranshtomar"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn">
+                <i class="fab fa-github"></i>
+                GitHub
+            </a>
+
+        </div>
+
+        <div class="back-home">
+            <a href="index.html" class="btn">
+                <i class="fas fa-home"></i>
+                Back to Home
+            </a>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2026 Rudransh Tomar. All Rights Reserved.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
-
 </html>
